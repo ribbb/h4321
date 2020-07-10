@@ -695,12 +695,12 @@ class App extends Component {
   fishScore(scores, helper_function) {
     let final_scores = [...scores];
     let reward = 0;
-
-    const kalaruoka = helper_function(final_scores[26]);
-    const makkararuoka = helper_function(final_scores[27]);
-    const kanaruokia = helper_function(final_scores[28]);
-    const liharuokia = helper_function(final_scores[29]);
-    const kasvisruokia = helper_function(final_scores[30]);
+    //There were dublicate questions so 26,27,28,29,30 were taken out of comission.
+    const kalaruoka = helper_function(final_scores[7]);
+    const makkararuoka = helper_function(final_scores[8]);
+    const kanaruokia = helper_function(final_scores[9]);
+    const liharuokia = helper_function(final_scores[10]);
+    const kasvisruokia = helper_function(final_scores[11]);
 
     if (kalaruoka >= 2) {
       reward += 2;

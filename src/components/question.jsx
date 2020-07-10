@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 class Question extends Component {
   render() {
-    const removed_question_ids = [35, 40, 44];
+    //IDS 27 28 29 30 31 are dublicate questions
+    const removed_question_ids = [35, 40, 44, 27, 28, 29, 30, 31];
     if (removed_question_ids.includes(this.props.q.id)) {
       return "";
     }
