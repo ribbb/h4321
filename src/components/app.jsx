@@ -572,7 +572,7 @@ class App extends Component {
     ],
         */
 
-      if (name_of_page === "Ruokarytmi") {
+      if (name_of_page === "Ruokarytmi" || name_of_page === "Kala ja liha") {
         this.setState({ dietary_pattern_score: reward });
       } else if (name_of_page === "Vilja") {
         this.setState({ grains_score: reward });
@@ -621,13 +621,14 @@ class App extends Component {
         reward += 1;
       }
     }
-
+    console.log(reward);
+    //There were dublicate questions so 7,8,9,10,11 were taken out of comission.
     const step4 =
-      helper_function(final_scores[7]) +
-      helper_function(final_scores[8]) +
-      helper_function(final_scores[9]) +
-      helper_function(final_scores[10]) +
-      helper_function(final_scores[11]);
+      helper_function(final_scores[26]) +
+      helper_function(final_scores[27]) +
+      helper_function(final_scores[28]) +
+      helper_function(final_scores[29]) +
+      helper_function(final_scores[30]);
     if (step4 >= 7) {
       reward += 3;
     } else if (step4 >= 6) {
@@ -635,6 +636,7 @@ class App extends Component {
     } else if (step4 >= 1) {
       reward += 1;
     }
+    console.log(reward);
     return reward;
   }
   grainScore(scores, helper_function) {
@@ -695,12 +697,11 @@ class App extends Component {
   fishScore(scores, helper_function) {
     let final_scores = [...scores];
     let reward = 0;
-    //There were dublicate questions so 26,27,28,29,30 were taken out of comission.
-    const kalaruoka = helper_function(final_scores[7]);
-    const makkararuoka = helper_function(final_scores[8]);
-    const kanaruokia = helper_function(final_scores[9]);
-    const liharuokia = helper_function(final_scores[10]);
-    const kasvisruokia = helper_function(final_scores[11]);
+    const kalaruoka = helper_function(final_scores[26]);
+    const makkararuoka = helper_function(final_scores[27]);
+    const kanaruokia = helper_function(final_scores[28]);
+    const liharuokia = helper_function(final_scores[29]);
+    const kasvisruokia = helper_function(final_scores[30]);
 
     if (kalaruoka >= 2) {
       reward += 2;
