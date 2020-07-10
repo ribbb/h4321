@@ -5,14 +5,15 @@ class Results extends Component {
   state = {};
   render() {
     /*
-      domains: [
-      "Meal frequency",
-      "Grains",
-      "Fruit and vegetables",
-      "Fats",
-      "Fish and meat",
-      "Dairy",
-      "Sugar, sweets, fast food, beverages",
+     /*
+    domains: [
+      "Ruokarytmi",
+      "Vilja",
+      "Hedelmät ja Vihannekset",
+      "Rasvat",
+      "Kala ja liha",
+      "Maidot",
+      "Sattumat",
       "Results",
     ],
     dietary_pattern_score: 0,
@@ -25,21 +26,31 @@ class Results extends Component {
       */
     return (
       <div id="results-div">
-        <h1>THIS IS WHERE THE RESULTS ARE</h1>
+        <h1>Tulokset</h1>
         <div>
-          Score from Meal frequency {this.props.all.dietary_pattern_score} / 10
+          Pisteet Ruokarytmistä {this.props.all.dietary_pattern_score} / 10
         </div>
-        <div>Score from Grains {this.props.all.grains_score} / 20</div>
+        <div>Pisteet Viljasta {this.props.all.grains_score} / 20</div>
         <div>
-          Score from Vegetables {this.props.all.fruit_and_vegetables_score} / 20
+          Pisteet Hedelmistä ja Vihanneksista{" "}
+          {this.props.all.fruit_and_vegetables_score} / 20
         </div>
-        <div>Score from Fats {this.props.all.fats_score} / 10</div>
+        <div>Pisteet Rasvoista {this.props.all.fats_score} / 15</div>
         <div>
-          Score from Meat and fish {this.props.all.meat_fish_score} / 10
+          Pisteet Kalasta ja Lihasta {this.props.all.meat_fish_score} / 10
         </div>
-        <div>Score from Dairy {this.props.all.dairy_score} /10</div>
+        <div>Pisteet Maidosta {this.props.all.dairy_score} /10</div>
+        <div>Pisteet Sattumista {this.props.all.sugar_drink_score} / 15</div>
         <div>
-          Score from Sugar and Drinks {this.props.all.sugar_drink_score} / 15
+          Kokonaispisteet{" "}
+          {this.props.all.dietary_pattern_score +
+            this.props.all.grains_score +
+            this.props.all.fruit_and_vegetables_score +
+            this.props.all.fats_score +
+            this.props.all.meat_fish_score +
+            this.props.all.dairy_score +
+            this.props.all.sugar_drink_score}{" "}
+          / 100
         </div>
         <Canvas all={this.props.all} />
       </div>

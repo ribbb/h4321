@@ -14,13 +14,13 @@ class App extends Component {
     dairy_score: 0,
     sugar_drink_score: 0,
     domains: [
-      "Meal frequency",
-      "Grains",
-      "Fruit and vegetables",
-      "Fats",
-      "Fish and meat",
-      "Dairy",
-      "Sugar, sweets, fast food, beverages",
+      "Ruokarytmi",
+      "Vilja",
+      "Hedelmät ja Vihannekset",
+      "Rasvat",
+      "Kala ja liha",
+      "Maidot",
+      "Sattumat",
       "Results",
     ],
     question_indexes: [0, 12, 19, 21, 26, 35, 44, 57, 58],
@@ -29,7 +29,7 @@ class App extends Component {
       {
         id: 1,
         question_description:
-          "1. Kuinka monena arki- tai työpäivänä viikossa syöt aamupalan",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt aamupalan?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -37,7 +37,7 @@ class App extends Component {
       {
         id: 2,
         question_description:
-          "Kuinka monena arki- tai työpäivänä viikossa syöt lounaan",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt lounaan?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -45,7 +45,7 @@ class App extends Component {
       {
         id: 3,
         question_description:
-          "Kuinka monena arki- tai työpäivänä viikossa syöt päivällisen/illallisen",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt päivällisen/illallisen?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -53,7 +53,7 @@ class App extends Component {
       {
         id: 4,
         question_description:
-          "Kuinka monena arki- tai työpäivänä viikossa syöt aamupäivän välipalan",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt aamupäivän välipalan?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -61,7 +61,7 @@ class App extends Component {
       {
         id: 5,
         question_description:
-          "Kuinka monena arki- tai työpäivänä viikossa syöt iltapäivän välipalan",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt iltapäivän välipalan?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -69,7 +69,7 @@ class App extends Component {
       {
         id: 6,
         question_description:
-          "Kuinka monena arki- tai työpäivänä viikossa syöt iltapalan välipalan",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt iltapalan?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -77,7 +77,7 @@ class App extends Component {
       {
         id: 7,
         question_description:
-          "Kuinka monena arki- tai työpäivänä viikossa syöt muita välipaloja",
+          "Kuinka monena arki- tai työpäivänä viikossa syöt muita välipaloja?",
         choices: ["0", "1-2", "3-4", "Joka arkipäivä"],
         scores: [0, 0.3, 0.7, 1],
         button_selected: [],
@@ -85,35 +85,35 @@ class App extends Component {
       {
         id: 8,
         question_description:
-          "Kuinka monta kertaa viikossa syöt kalaruokia (esim. uunikalaa, paistettuja silakoita, kalakeittoa, silliä, graavilohta)",
+          "Kuinka monta kertaa viikossa syöt kalaruokia (esim. uunikalaa, paistettuja silakoita, kalakeittoa, silliä, graavilohta)?",
         choices: [],
         scores: [],
       },
       {
         id: 9,
         question_description:
-          "Kuinka monta kertaa viikossa syöt makkararuokia (esim. uunimakkaraa, makkarakeittoa, makkarakastiketta)",
+          "Kuinka monta kertaa viikossa syöt makkararuokia (esim. uunimakkaraa, makkarakeittoa, makkarakastiketta)?",
         choices: [],
         scores: [],
       },
       {
         id: 10,
         question_description:
-          "Kuinka monta kertaa viikossa syöt kana- tai broileriruokia (esim. grillibroileria, kanaviillokkia, kanasalaattia)",
+          "Kuinka monta kertaa viikossa syöt kana- tai broileriruokia (esim. grillibroileria, kanaviillokkia, kanasalaattia)?",
         choices: [],
         scores: [],
       },
       {
         id: 11,
         question_description:
-          "Kuinka monta kertaa viikossa syöt liharuokia (esim. lihakeittoa, paistia, lihapullia, kyljyksiä, maksalaatikkoa)",
+          "Kuinka monta kertaa viikossa syöt liharuokia (esim. lihakeittoa, paistia, lihapullia, kyljyksiä, maksalaatikkoa)?",
         choices: [],
         scores: [],
       },
       {
         id: 12,
         question_description:
-          "Kuinka monta kertaa viikossa syöt kasvisruokia pääruokana (esim. kasviskeittoa, pinaattiohukaisia, kasvissalaattia)",
+          "Kuinka monta kertaa viikossa syöt kasvisruokia pääruokana (esim. kasviskeittoa, pinaattiohukaisia, kasvissalaattia)?",
         choices: [],
         scores: [],
       },
@@ -267,35 +267,35 @@ class App extends Component {
       {
         id: 27,
         question_description:
-          "Kuinka monta kertaa viikossa syöt kalaruokia (esim. uunikalaa, paistettuja silakoita, kalakeittoa, silliä, graavilohta)",
+          "Kuinka monta kertaa viikossa syöt kalaruokia (esim. uunikalaa, paistettuja silakoita, kalakeittoa, silliä, graavilohta)?",
         choices: [],
         scores: [],
       },
       {
         id: 28,
         question_description:
-          "Kuinka monta kertaa viikossa syöt makkararuokia (esim. uunimakkaraa, makkarakeittoa, makkarakastiketta)",
+          "Kuinka monta kertaa viikossa syöt makkararuokia (esim. uunimakkaraa, makkarakeittoa, makkarakastiketta)?",
         choices: [],
         scores: [],
       },
       {
         id: 29,
         question_description:
-          "Kuinka monta kertaa viikossa syöt kana- tai broileriruokia (esim. grillibroileria, kanaviillokkia, kanasalaattia)",
+          "Kuinka monta kertaa viikossa syöt kana- tai broileriruokia (esim. grillibroileria, kanaviillokkia, kanasalaattia)?",
         choices: [],
         scores: [],
       },
       {
         id: 30,
         question_description:
-          "Kuinka monta kertaa viikossa syöt liharuokia (esim. lihakeittoa, paistia, lihapullia, kyljyksiä, maksalaatikkoa)",
+          "Kuinka monta kertaa viikossa syöt liharuokia (esim. lihakeittoa, paistia, lihapullia, kyljyksiä, maksalaatikkoa)?",
         choices: [],
         scores: [],
       },
       {
         id: 31,
         question_description:
-          "Kuinka monta kertaa viikossa syöt kasvisruokia pääruokana (esim. kasviskeittoa, pinaattiohukaisia, kasvissalaattia)",
+          "Kuinka monta kertaa viikossa syöt kasvisruokia pääruokana (esim. kasviskeittoa, pinaattiohukaisia, kasvissalaattia)?",
         choices: [],
         scores: [],
       },
@@ -533,7 +533,7 @@ class App extends Component {
   update_state() {
     /*
     domains: [
-      "Meal frequency",
+      "Ruokarytmi",
       "Grains",
       "Fruit and vegetables",
       "Fats",
@@ -559,19 +559,32 @@ class App extends Component {
       );
       const name_of_page = this.state.domains[this.state.question_page_number];
       console.log("Updating state");
-      if (name_of_page === "Meal frequency") {
+      /*
+        domains: [
+      "Ruokarytmi",
+      "Vilja",
+      "Hedelmät ja Vihannekset",
+      "Rasvat",
+      "Kala ja liha",
+      "Maidot",
+      "Sattumat",
+      "Results",
+    ],
+        */
+
+      if (name_of_page === "Ruokarytmi") {
         this.setState({ dietary_pattern_score: reward });
-      } else if (name_of_page === "Grains") {
+      } else if (name_of_page === "Vilja") {
         this.setState({ grains_score: reward });
-      } else if (name_of_page === "Fruit and vegetables") {
+      } else if (name_of_page === "Hedelmät ja Vihannekset") {
         this.setState({ fruit_and_vegetables_score: reward });
-      } else if (name_of_page === "Fats") {
+      } else if (name_of_page === "Rasvat") {
         this.setState({ fats_score: reward });
-      } else if (name_of_page === "Fish and meat") {
+      } else if (name_of_page === "Kala ja liha") {
         this.setState({ meat_fish_score: reward });
-      } else if (name_of_page === "Dairy") {
+      } else if (name_of_page === "Maidot") {
         this.setState({ dairy_score: reward });
-      } else if (name_of_page === "Sugar, sweets, fast food, beverages") {
+      } else if (name_of_page === "Sattumat") {
         this.setState({ sugar_drink_score: reward });
       } else {
         console.log("STATE FOR SCORES WAS NOT UPDATED");
