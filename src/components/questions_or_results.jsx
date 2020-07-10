@@ -18,8 +18,8 @@ class Questions_or_results extends Component {
     );
     if (this.props.all.question_page_number === 7) {
       if (
-        this.props.all.final_scores.length === 57 &&
-        !this.props.all.final_scores.includes(undefined)
+        this.props.all.final_scores.length === 57 //&&
+        //!this.props.all.final_scores.includes(undefined)
       ) {
         content = <Results all={this.props.all} />;
       } else {
