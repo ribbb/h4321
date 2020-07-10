@@ -85,7 +85,7 @@ class Canvas extends React.Component {
     this.add_bar(
       "#aa00aa",
       180,
-      -this.get_graph_size(this.props.all.fats_score, 10),
+      -this.get_graph_size(this.props.all.fats_score, 15),
       ctx
     );
     ctx.fillStyle = "#00aaaa";
