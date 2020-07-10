@@ -12,6 +12,16 @@ class Canvas extends React.Component {
       "Sugar, sweets, fast food, beverages",
       "Results",
     ],
+    domains: [
+      "Ruokarytmi",
+      "Vilja",
+      "Hedelmät ja Vihannekset",
+      "Rasvat",
+      "Kala ja liha",
+      "Maidot",
+      "Sattumat",
+      "Results",
+    ],
     dietary_pattern_score: 0,
     grains_score: 0,
     fruit_and_vegetables_score: 0,
@@ -51,7 +61,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#FF0000";
     ctx.fillRect(370, 30, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Meal frequency", 400, 45);
+    ctx.fillText(this.props.all.domains[0], 400, 45);
     this.add_bar(
       "#FF0000",
       60,
@@ -61,7 +71,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#0000FF";
     ctx.fillRect(370, 60, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Grains", 400, 75);
+    ctx.fillText(this.props.all.domains[1], 400, 75);
     this.add_bar(
       "#0000FF",
       100,
@@ -71,7 +81,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#00FF00";
     ctx.fillRect(370, 90, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Fruit and vegetables", 400, 105);
+    ctx.fillText(this.props.all.domains[2], 400, 105);
     this.add_bar(
       "#00FF00",
       140,
@@ -81,7 +91,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#aa00aa";
     ctx.fillRect(370, 120, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Fats", 400, 135);
+    ctx.fillText(this.props.all.domains[3], 400, 135);
     this.add_bar(
       "#aa00aa",
       180,
@@ -91,7 +101,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#00aaaa";
     ctx.fillRect(370, 150, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Fish and meat", 400, 165);
+    ctx.fillText(this.props.all.domains[4], 400, 165);
     this.add_bar(
       "#00aaaa",
       220,
@@ -101,7 +111,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#aaaa00";
     ctx.fillRect(370, 180, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Dairy", 400, 195);
+    ctx.fillText(this.props.all.domains[5], 400, 195);
     this.add_bar(
       "#aaaa00",
       260,
@@ -111,7 +121,7 @@ class Canvas extends React.Component {
     ctx.fillStyle = "#000000";
     ctx.fillRect(370, 210, 20, 20);
     ctx.fillStyle = "#000000";
-    ctx.fillText("Sugar and beverages", 400, 225);
+    ctx.fillText(this.props.all.domains[6], 400, 225);
     this.add_bar(
       "#000000",
       300,
