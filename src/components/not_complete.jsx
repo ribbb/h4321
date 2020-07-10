@@ -17,27 +17,31 @@ class NotComplete extends Component {
     content.push(
       this.check_answers(
         this.props.all.final_scores.slice(0, 12),
-        "Meal frequency",
+        "Ruokarytmi",
         12
       )
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(12, 19), "Grains", 7)
+      this.check_answers(this.props.all.final_scores.slice(12, 19), "Viljat", 7)
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(19, 21), "Fruits", 2)
+      this.check_answers(
+        this.props.all.final_scores.slice(19, 21),
+        "Hedelmät",
+        2
+      )
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(21, 26), "Fats", 5)
+      this.check_answers(this.props.all.final_scores.slice(21, 26), "Rasvat", 5)
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(26, 35), "Fish", 9)
+      this.check_answers(this.props.all.final_scores.slice(26, 35), "Kala", 9)
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(35, 44), "Dairy", 9)
+      this.check_answers(this.props.all.final_scores.slice(35, 44), "Maito", 9)
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(44), "Sugar", 13)
+      this.check_answers(this.props.all.final_scores.slice(44), "Sattumat", 13)
     );
     let missin_fields = [];
     for (let i = 0; i < content.length; i++) {
@@ -49,7 +53,7 @@ class NotComplete extends Component {
     }
     return (
       <div>
-        <h3>Please fill {missin_fields} pages to see results.</h3>
+        <h3>Täytä {missin_fields} sivut, jotta tulos voidaan laskea.</h3>
       </div>
     );
   }

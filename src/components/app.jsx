@@ -21,7 +21,7 @@ class App extends Component {
       "Kala ja liha",
       "Maidot",
       "Sattumat",
-      "Results",
+      "Tulokset",
     ],
     question_indexes: [0, 12, 19, 21, 26, 35, 44, 57, 58],
     question_page_number: 0,
