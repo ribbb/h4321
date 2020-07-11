@@ -550,8 +550,21 @@ class App extends Component {
       this.fishScore,
       this.dairyScore,
       this.sugarScore,
-      "result",
     ];
+    const reward = score_function_list.map((x) =>
+      x(this.state.final_scores, this.user_input_score_helper)
+    );
+    console.log(reward);
+    this.setState({
+      dietary_pattern_score: reward[0],
+      grains_score: reward[1],
+      fruit_and_vegetables_score: reward[2],
+      fats_score: reward[3],
+      meat_fish_score: reward[4],
+      dairy_score: reward[5],
+      sugar_drink_score: reward[6],
+    });
+    /*
     if (score_function_list[this.state.question_page_number] !== "result") {
       const reward = score_function_list[this.state.question_page_number](
         this.state.final_scores,
@@ -559,6 +572,8 @@ class App extends Component {
       );
       const name_of_page = this.state.domains[this.state.question_page_number];
       console.log("Updating state");
+      console.log(reward);
+      console.log(name_of_page);
       /*
         domains: [
       "Ruokarytmi",
@@ -570,7 +585,7 @@ class App extends Component {
       "Sattumat",
       "Results",
     ],
-        */
+        
 
       if (name_of_page === "Ruokarytmi" || name_of_page === "Kala ja liha") {
         this.setState({ dietary_pattern_score: reward });
@@ -589,7 +604,7 @@ class App extends Component {
       } else {
         console.log("STATE FOR SCORES WAS NOT UPDATED");
       }
-    }
+    } */
   }
   check_final_score(score) {
     return score === undefined ? 0 : score;
