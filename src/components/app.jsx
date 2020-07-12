@@ -914,6 +914,7 @@ class App extends Component {
         <Header
           domains={this.state.domains}
           changeQuestions={this.changeQuestions}
+          pageNumber={this.state.question_page_number}
         />
         <PageName
           pageNumber={this.state.question_page_number}

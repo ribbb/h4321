@@ -8,9 +8,15 @@ class Header extends Component {
   }
   //state = {  }
   link_domains(domain) {
+    let style = {};
+    if (this.props.domains.indexOf(domain) == this.props.pageNumber) {
+      style = {
+        textDecoration: "underline",
+      };
+    }
     return (
       <li className="nav-item active" onClick={this.props.changeQuestions}>
-        <a className="nav-link" href="#" id="Green">
+        <a className="nav-link" href="#" id="Green" style={style}>
           {domain} <span className="sr-only"></span>
         </a>
       </li>
