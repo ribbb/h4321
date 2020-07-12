@@ -6,8 +6,14 @@ class Question extends Component {
     if (removed_question_ids.includes(this.props.q.id)) {
       return "";
     }
+    let style = {};
+    if (this.props.final_scores[this.props.q.id - 1] !== undefined) {
+      style = {
+        boxShadow: "1px 3px 1px #9E9E9E",
+      };
+    }
     return (
-      <div id="questions">
+      <div id="questions" style={style}>
         {this.props.q.question_description}
         <div id="questionAnswers">
           {this.props.q.choices.length > 1

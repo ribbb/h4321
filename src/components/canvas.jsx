@@ -229,6 +229,13 @@ class Canvas extends React.Component {
                   },
                 },
               ],
+              xAxes: [
+                {
+                  ticks: {
+                    fontSize: 16,
+                  },
+                },
+              ],
             },
           }}
         />
