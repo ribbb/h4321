@@ -18,7 +18,7 @@ class App extends Component {
       "Vilja",
       "Hedelmät ja Vihannekset",
       "Rasvat",
-      "Kala ja liha",
+      "Kala ja Liha",
       "Maidot",
       "Sattumat",
       "Tulokset",
