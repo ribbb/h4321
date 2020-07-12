@@ -25,7 +25,7 @@ class Header extends Component {
   render() {
     const links = this.props.domains.map(this.link_domains);
     return (
-      <div>
+      <div id="nav-complete">
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
           <a className="navbar-brand" href="#">
             Kysely
