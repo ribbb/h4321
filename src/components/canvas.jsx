@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Doughnut } from "react-chartjs-2";
 class Canvas extends React.Component {
   /*
       domains: [
@@ -212,33 +212,60 @@ class Canvas extends React.Component {
         },
       ],
     };
+    const combined_score =
+      this.props.all.dietary_pattern_score +
+      this.props.all.grains_score +
+      this.props.all.fruit_and_vegetables_score +
+      this.props.all.fats_score +
+      this.props.all.meat_fish_score +
+      this.props.all.dairy_score +
+      this.props.all.sugar_drink_score;
+
+    const dough = {
+      labels: ["Kokonaispisteet"],
+      datasets: [
+        {
+          data: [combined_score, 100 - combined_score],
+          backgroundColor: ["#FF6384", "#36A2EB"],
+          hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+        },
+      ],
+    };
     //<canvas id="myCanvas" ref="canvas" width={600} height={400} />
+    const dough_style = {
+      width: "100vw",
+    };
     return (
       <div>
-        <Bar
-          data={data}
-          width={100}
-          height={400}
-          options={{
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    suggestedMax: 1,
+        <div>
+          <Bar
+            data={data}
+            width={100}
+            height={400}
+            options={{
+              maintainAspectRatio: false,
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      suggestedMax: 1,
+                    },
                   },
-                },
-              ],
-              xAxes: [
-                {
-                  ticks: {
-                    fontSize: 16,
+                ],
+                xAxes: [
+                  {
+                    ticks: {
+                      fontSize: 16,
+                    },
                   },
-                },
-              ],
-            },
-          }}
-        />
+                ],
+              },
+            }}
+          />
+        </div>
+        <div style={dough_style}>
+          <Doughnut data={dough} width={100} height={50} />
+        </div>
       </div>
     );
   }

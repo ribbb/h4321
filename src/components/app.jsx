@@ -925,21 +925,24 @@ class App extends Component {
           domains={this.state.domains}
           pageNumber={this.state.question_page_number}
         />
-        <Questions_or_results
-          all={this.state}
-          user_input_score_helper={this.user_input_score_helper}
-          changeQuestions={this.changeQuestions}
-          set_score={this.set_score}
-          evalUserInput={this.evalUserInput}
-          score_function_list={score_function_list}
-          update_state={this.update_state}
-        />
-
-        <ChagePage
-          changeQuestions={this.changeQuestions}
-          domains={this.state.domains}
-          pageNumber={this.state.question_page_number}
-        />
+        <div>
+          <Questions_or_results
+            all={this.state}
+            user_input_score_helper={this.user_input_score_helper}
+            changeQuestions={this.changeQuestions}
+            set_score={this.set_score}
+            evalUserInput={this.evalUserInput}
+            score_function_list={score_function_list}
+            update_state={this.update_state}
+          />
+        </div>
+        <div>
+          <ChagePage
+            changeQuestions={this.changeQuestions}
+            domains={this.state.domains}
+            pageNumber={this.state.question_page_number}
+          />
+        </div>
       </div>
     );
   }
