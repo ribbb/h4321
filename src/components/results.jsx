@@ -26,7 +26,6 @@ class Results extends Component {
       */
     return (
       <div id="results-div">
-        <h1>Tulokset</h1>
         <div>
           Pisteet Ruokarytmistä {this.props.all.dietary_pattern_score} / 10
         </div>

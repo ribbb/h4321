@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.link_domains = this.link_domains.bind(this);
+  }
   //state = {  }
+  link_domains(domain) {
+    return (
+      <li className="nav-item active" onClick={this.props.changeQuestions}>
+        <a className="nav-link" href="#" id="Green">
+          {domain} <span className="sr-only"></span>
+        </a>
+      </li>
+    );
+  }
   render() {
+    const links = this.props.domains.map(this.link_domains);
     return (
       <div>
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -22,13 +37,7 @@ class Header extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
-              </li>
-            </ul>
+            <ul className="navbar-nav mr-auto">{links}</ul>
           </div>
         </nav>
       </div>

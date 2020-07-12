@@ -851,11 +851,35 @@ class App extends Component {
     this.setState({ final_scores: final_scores });
     this.update_state();
   };
+
   changeQuestions = (event) => {
     console.log(event.target.id);
+    console.log(event.target.text);
     let new_page_num;
     const number_of_pages = this.state.question_indexes.length;
     const current_page_number = this.state.question_page_number;
+    if (event.target.text === undefined) {
+      switch (event.target.id) {
+        case "next":
+          if (number_of_pages - 2 <= current_page_number) {
+            new_page_num = 0;
+          } else {
+            new_page_num = current_page_number + 1;
+          }
+          break;
+        default:
+          if (current_page_number === 0) {
+            new_page_num = number_of_pages - 2;
+          } else {
+            new_page_num = current_page_number - 1;
+          }
+          break;
+      }
+    } else {
+      new_page_num = this.state.domains.indexOf(event.target.text.trim());
+    }
+
+    /*
     if (event.target.id === "next") {
       if (number_of_pages - 2 <= current_page_number) {
         new_page_num = 0;
@@ -869,6 +893,7 @@ class App extends Component {
         new_page_num = current_page_number - 1;
       }
     }
+    */
     this.update_state();
     this.setState({ question_page_number: new_page_num });
   };
@@ -886,7 +911,10 @@ class App extends Component {
 
     return (
       <div>
-        <Header />
+        <Header
+          domains={this.state.domains}
+          changeQuestions={this.changeQuestions}
+        />
         <PageName
           pageNumber={this.state.question_page_number}
           domains={this.state.domains}
