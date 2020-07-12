@@ -811,10 +811,10 @@ class App extends Component {
     const pikaruoka = final_scores[44] || 0;
     const leivokset = final_scores[45] || 0;
     const makeiset = final_scores[46] || 0;
-    const tee = helper_function(final_scores[47]);
-    const kahvi = helper_function(final_scores[48]);
+    //const tee = helper_function(final_scores[47]);
+    //const kahvi = helper_function(final_scores[48]);
     const virvoitusjuoma = helper_function(final_scores[49]);
-    const sokeritonjuoma = helper_function(final_scores[50]);
+    //const sokeritonjuoma = helper_function(final_scores[50]);
     const täysmehu = helper_function(final_scores[51]);
     const sokeroitu = helper_function(final_scores[52]);
     const olut = helper_function(final_scores[53]);
