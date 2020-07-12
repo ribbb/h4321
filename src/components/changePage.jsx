@@ -21,7 +21,7 @@ class ChangePage extends Component {
             className="btn btn-info"
             onClick={this.props.changeQuestions}
           >
-            Previous page {previous_page_number}.
+            Edellinen sivu {previous_page_number}.
           </button>
         </div>
         <div id="nextButton">
@@ -30,7 +30,7 @@ class ChangePage extends Component {
             className="btn btn-success"
             onClick={this.props.changeQuestions}
           >
-            Next page {next_page_name}.
+            Seuraava sivu {next_page_name}.
           </button>
         </div>
       </div>
