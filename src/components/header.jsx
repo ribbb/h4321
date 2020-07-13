@@ -9,7 +9,7 @@ class Header extends Component {
   //state = {  }
   link_domains(domain) {
     let style = {};
-    if (this.props.domains.indexOf(domain) == this.props.pageNumber) {
+    if (this.props.domains.indexOf(domain) === this.props.pageNumber) {
       style = {
         textDecoration: "underline",
       };

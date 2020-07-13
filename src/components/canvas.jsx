@@ -264,7 +264,17 @@ class Canvas extends React.Component {
           />
         </div>
         <div style={dough_style}>
-          <Doughnut data={dough} width={100} height={50} />
+          <Doughnut
+            data={dough}
+            width={100}
+            height={50}
+            options={{
+              animation: {
+                duration: 2000,
+                easing: "easeInExpo",
+              },
+            }}
+          />
         </div>
       </div>
     );
