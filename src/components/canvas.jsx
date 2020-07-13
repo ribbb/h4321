@@ -226,8 +226,8 @@ class Canvas extends React.Component {
       datasets: [
         {
           data: [combined_score, 100 - combined_score],
-          backgroundColor: ["#FF6384", "#36A2EB"],
-          hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          backgroundColor: ["#FF6384", "#666d72"],
+          hoverBackgroundColor: ["#FF6384", "#666d72"],
         },
       ],
     };
