@@ -18,11 +18,7 @@ class ScoreCalculator extends Component {
       this.props.domains[this.props.question_page_number]
     );
     */
-    return (
-      <div>
-        <h3>0</h3>
-      </div>
-    );
+    return <div></div>;
   }
 }
 
