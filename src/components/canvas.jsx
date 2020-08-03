@@ -268,6 +268,11 @@ class Canvas extends React.Component {
             data={dough}
             width={100}
             height={50}
+            legend={{
+              align: "center",
+              position: "bottom",
+              display: true,
+            }}
             options={{
               animation: {
                 duration: 2000,

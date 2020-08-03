@@ -782,7 +782,7 @@ class App extends Component {
     if (rasvainen === 0) {
       reward += 1;
     }
-    const three = reward - two - one;
+
     const vähärasvainen = helper_function(final_scores[39]);
     const paljon_rasvaa = helper_function(final_scores[41]);
     const kasvirasva = helper_function(final_scores[42]);
