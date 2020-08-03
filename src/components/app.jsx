@@ -767,7 +767,7 @@ class App extends Component {
 
     if (rasvaton_ykkös >= 10) {
       reward += 0;
-    } else if (rasvaton_ykkös >= 6) {
+    } else if (rasvaton_ykkös >= 7) {
       reward += 2;
     } else if (rasvaton_ykkös >= 5) {
       reward += 3;
@@ -782,6 +782,7 @@ class App extends Component {
     if (rasvainen === 0) {
       reward += 1;
     }
+    const three = reward - two - one;
     const vähärasvainen = helper_function(final_scores[39]);
     const paljon_rasvaa = helper_function(final_scores[41]);
     const kasvirasva = helper_function(final_scores[42]);
@@ -804,7 +805,6 @@ class App extends Component {
     }
     return reward;
   }
-
   sugarScore(scores, helper_function) {
     let final_scores = [...scores];
     let reward = 0;
