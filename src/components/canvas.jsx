@@ -230,7 +230,6 @@ class Canvas extends React.Component {
           hoverBackgroundColor: ["#FF6384", "#666d72"],
         },
       ],
-      text: "haha",
     };
     //<canvas id="myCanvas" ref="canvas" width={600} height={400} />
     const dough_style = {
@@ -238,6 +237,24 @@ class Canvas extends React.Component {
     };
     return (
       <div>
+        <div style={dough_style}>
+          <Doughnut
+            data={dough}
+            width={100}
+            height={50}
+            legend={{
+              align: "center",
+              position: "top",
+              display: true,
+            }}
+            options={{
+              animation: {
+                duration: 2000,
+                easing: "easeInExpo",
+              },
+            }}
+          />
+        </div>
         <div>
           <Bar
             data={data}
@@ -260,24 +277,6 @@ class Canvas extends React.Component {
                     },
                   },
                 ],
-              },
-            }}
-          />
-        </div>
-        <div style={dough_style}>
-          <Doughnut
-            data={dough}
-            width={100}
-            height={50}
-            legend={{
-              align: "center",
-              position: "bottom",
-              display: true,
-            }}
-            options={{
-              animation: {
-                duration: 2000,
-                easing: "easeInExpo",
               },
             }}
           />

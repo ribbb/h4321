@@ -4,8 +4,10 @@ import Header from "./header";
 import ChagePage from "./changePage";
 import PageName from "./pageName";
 import Questions_or_results from "./questions_or_results";
+import LandingPage from "./landing_page";
 class App extends Component {
   state = {
+    first_load: true,
     dietary_pattern_score: 0,
     grains_score: 0,
     fruit_and_vegetables_score: 0,
@@ -897,7 +899,9 @@ class App extends Component {
     this.update_state();
     this.setState({ question_page_number: new_page_num });
   };
-
+  handleLandingPage = () => {
+    this.setState({ first_load: false });
+  };
   render() {
     const score_function_list = [
       this.schedule_score,
@@ -908,8 +912,7 @@ class App extends Component {
       this.dairyScore,
       this.sugarScore,
     ];
-
-    return (
+    let content = (
       <div>
         <Header
           domains={this.state.domains}
@@ -945,6 +948,14 @@ class App extends Component {
         </div>
       </div>
     );
+    if (this.state.first_load) {
+      content = (
+        <div>
+          <LandingPage handleClick={this.handleLandingPage} />
+        </div>
+      );
+    }
+    return <div>{content}</div>;
   }
 }
 
