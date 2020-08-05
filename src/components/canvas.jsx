@@ -230,6 +230,7 @@ class Canvas extends React.Component {
           hoverBackgroundColor: ["#FF6384", "#666d72"],
         },
       ],
+      text: "haha",
     };
     //<canvas id="myCanvas" ref="canvas" width={600} height={400} />
     const dough_style = {
