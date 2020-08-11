@@ -2,8 +2,33 @@ import React, { Component } from "react";
 import Canvas from "./canvas";
 
 class Results extends Component {
-  state = {};
+  checkHints(all) {
+    let hints_showing = [];
+    if (all.dietary_pattern_score / 10 < 0.5) {
+      hints_showing.push("0");
+    }
+    if (all.grains_score / 20 < 0.5) {
+      hints_showing.push("1");
+    }
+    if (all.fruit_and_vegetables_score / 20 < 0.5) {
+      hints_showing.push("2");
+    }
+    if (all.fats_score / 15 < 0.5) {
+      hints_showing.push("3");
+    }
+    if (all.meat_fish_score / 10 < 0.5) {
+      hints_showing.push("4");
+    }
+    if (all.dairy_score / 10 < 0.5) {
+      hints_showing.push("5");
+    }
+    if (all.sugar_drink_score / 15 < 0.5) {
+      hints_showing.push("6");
+    }
+    return hints_showing;
+  }
   render() {
+    let hints_showing = this.checkHints(this.props.all);
     /*
      /*
     domains: [
@@ -77,12 +102,30 @@ class Results extends Component {
         <Canvas all={this.props.all} />
         <br />
         <br />
-        <div style={flexcontainer}>
-          <div style={{ order: "0" }}></div>
-          <div style={{ order: "1" }}></div>
-        </div>
+        <h4>Vihjeitä pisteiden parantamiseen</h4>
+        <div style={flexcontainer}>{hints_showing.map(this.GenerateHints)}</div>
         <br />
         <br />
+      </div>
+    );
+  }
+  GenerateHints(idx) {
+    const hints = [
+      "Ruokarytmi: Päivittäin on hyvä syödä säännöllisin väliajoin terveellinen ateria, esimerkiksi aamupala, lounas ja päivällinen, sekä tarvittaessa 1-2 välipalaa. Säännöllinen ateriarytmi pitää veren sokeripitoisuuden tasaisena, auttaa syömään kohtuullisesti yksittäisillä aterioilla ja vähentää houkutusta napostella tai ahmia ruokaa ja tukee siten painonhallintaa.",
+      "Vilja: Viljavalmisteiden suositeltava päivittäinen käyttömäärä on noin 6 annosta naisille ja 9 annosta miehille, täysjyväviljaa suosien. Lautasellinen puuroa vastaa kahta annosta. Leivistä kannattaa valita laatuja, joissa on kuitua vähintään 6 g / 100 g.",
+      "Hedelmät ja vihannekset: Kasviksia (vihanneksia, juureksia, sieniä, hedelmiä ja marjoja) tulisi nauttia vähintään 500 g päivässä. Ne sisältävät runsaasti kuitua, vitamiineja ja kivennäisaineita ja muita hyödyllisiä yhdisteitä. Palkokasvit ovat hyvä proteiinin lähde.",
+      "Rasvat: Leipärasvana tulisi käyttää vähintään 60% rasvaa sisältävää kasviöljypohjaista levitettä ja salaattikastikkeena kasviöljypohjaista kastiketta. Myös pähkinöistä saa runsaasti pehmeää rasvaa, niitä voi nauttia (suolaamattomina ja sokeroimattomina) noin 30 g (2 ruokalusikallista) päivässä.",
+      "Kala ja liha: Kalaa suositellaan nautittavaksi 2-3 kertaa viikossa kalalajeja vaihdellen. Lihavalmisteita ja punaista lihaa ei tulisi käyttää enempää kuin 500 g viikossa.",
+      "Maidot: Maitovalmisteet ovat hyviä proteiinin, kalsiumin, jodin D-vitamiinin lähteitä. 5-6 dl nestemäisiä maitovalmisteita ja 2-3 viipaletta juustoa kattaa päivittäisen kalsiumin tarpeen. Maidon rasvasta 2/3 on tyydyttynyttä ”kovaa” rasvaa, siksi kannattaa suosia rasvattomia ja vähärasvaisia maitovalmisteita (nestemäiset  enintään 1%, juustot enintään 17% rasvaa).",
+      "Sattumat: Sattumiksi kutsutaan ”mielihyväruokia” joiden ravitsemuksellinen arvo on vähäinen. Näihin kuuluvat makeiset, perunalastut, leivonnaiset sekä sokeri- tai alkoholipitoiset juomat. Niitä kannattaa nauttia vain harvoin.",
+    ];
+    let hint = hints[idx];
+    let topic_and_hint = hint.split(":");
+
+    return (
+      <div id="hints" key={"hint-".concat(idx)}>
+        <b>{topic_and_hint[0]}:</b>
+        {topic_and_hint[1]}
       </div>
     );
   }

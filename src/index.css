@@ -115,3 +115,10 @@ main {
     display: block;
   }
 }
+
+#hints {
+  max-width: 1000px;
+  padding: 20px;
+  border-style: ridge;
+  border-color: antiquewhite;
+}
