@@ -245,7 +245,10 @@ class Canvas extends React.Component {
     };
     //<canvas id="myCanvas" ref="canvas" width={600} height={400} />
     const dough_style = {
-      width: "100vw",
+      margin: "auto",
+      width: "100%",
+      maxWidth: "1200px",
+      paddingBottom: "20px",
     };
     return (
       <div>
