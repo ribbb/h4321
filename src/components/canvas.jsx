@@ -181,6 +181,18 @@ class Canvas extends React.Component {
   sugar_drink_score: 0, 15
   */
   render() {
+    let bar_chart_labels = this.props.all.domains.filter(
+      (x) => x != "Tulokset"
+    );
+    let original_scores = [
+      this.props.all.dietary_pattern_score,
+      this.props.all.grains_score,
+      this.props.all.fruit_and_vegetables_score,
+      this.props.all.fats_score,
+      this.props.all.meat_fish_score,
+      this.props.all.dairy_score,
+      this.props.all.sugar_drink_score,
+    ];
     const data = {
       labels: [
         this.props.all.domains[0],
@@ -211,6 +223,7 @@ class Canvas extends React.Component {
         },
       ],
     };
+    let max_scores = [10, 20, 20, 15, 10, 10, 15];
     const combined_score =
       this.props.all.dietary_pattern_score +
       this.props.all.grains_score +
@@ -260,6 +273,23 @@ class Canvas extends React.Component {
             width={100}
             height={400}
             options={{
+              tooltips: {
+                callbacks: {
+                  label: function (tooltipItem, data) {
+                    let label = "Pisteet "
+                      .concat(original_scores[tooltipItem.index])
+                      .concat("/")
+                      .concat(max_scores[tooltipItem.index]);
+                    return label;
+                  },
+                },
+                mode: "index",
+                intersect: false,
+              },
+              hover: {
+                mode: "index",
+                intersect: false,
+              },
               maintainAspectRatio: false,
               scales: {
                 yAxes: [
