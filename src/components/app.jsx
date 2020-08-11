@@ -556,7 +556,6 @@ class App extends Component {
     const reward = score_function_list.map((x) =>
       x(this.state.final_scores, this.user_input_score_helper)
     );
-    console.log(reward);
     this.setState({
       dietary_pattern_score: reward[0],
       grains_score: reward[1],
@@ -573,9 +572,7 @@ class App extends Component {
         this.user_input_score_helper
       );
       const name_of_page = this.state.domains[this.state.question_page_number];
-      console.log("Updating state");
-      console.log(reward);
-      console.log(name_of_page);
+
       /*
         domains: [
       "Ruokarytmi",
@@ -604,7 +601,7 @@ class App extends Component {
       } else if (name_of_page === "Sattumat") {
         this.setState({ sugar_drink_score: reward });
       } else {
-        console.log("STATE FOR SCORES WAS NOT UPDATED");
+
       }
     } */
   }
@@ -638,7 +635,6 @@ class App extends Component {
         reward += 1;
       }
     }
-    console.log(reward);
     //There were dublicate questions so 7,8,9,10,11 were taken out of comission.
     const step4 =
       helper_function(final_scores[26]) +
@@ -653,7 +649,6 @@ class App extends Component {
     } else if (step4 >= 1) {
       reward += 1;
     }
-    console.log(reward);
     return reward;
   }
   grainScore(scores, helper_function) {
@@ -827,7 +822,6 @@ class App extends Component {
     reward += pikaruoka;
     reward += leivokset;
     reward += makeiset;
-    //console.log(reward);
     if (täysmehu <= 7) {
       reward += 1;
     }
@@ -855,8 +849,6 @@ class App extends Component {
   };
 
   changeQuestions = (event) => {
-    console.log(event.target.id);
-    console.log(event.target.text);
     let new_page_num;
     const number_of_pages = this.state.question_indexes.length;
     const current_page_number = this.state.question_page_number;

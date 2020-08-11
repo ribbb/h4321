@@ -15,7 +15,11 @@ class Header extends Component {
       };
     }
     return (
-      <li className="nav-item active" onClick={this.props.changeQuestions}>
+      <li
+        className="nav-item active"
+        key={"header-".concat(domain)}
+        onClick={this.props.changeQuestions}
+      >
         <a className="nav-link" href="#" id="Green" style={style}>
           {domain} <span className="sr-only"></span>
         </a>

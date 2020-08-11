@@ -49,7 +49,6 @@ class Canvas extends React.Component {
   }
   add_bar(color, location, size, ctx) {
     ctx.fillStyle = color;
-    console.log(size);
     ctx.fillRect(
       location,
       350,

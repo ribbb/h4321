@@ -46,7 +46,7 @@ class Question extends Component {
     //  scores: [0, 0.3, 0.7, 1],
     //  button_selected: [],
     //},
-    //console.log(this.props.q.c);
+
     const idxFinder = (element) => element === choice;
 
     let class_text = "btn btn-";
@@ -58,8 +58,10 @@ class Question extends Component {
       class_text += "primary";
     }
     //console.log(this.props.q.button_selected);
+    //dadasd
+    //dada
     return (
-      <div id="individualAnswer">
+      <div id="individualAnswer" key={"individualAnswer".concat(choice)}>
         <button
           onClick={() => this.props.multipleChoice([choice, this.props.q.id])}
           className={class_text}

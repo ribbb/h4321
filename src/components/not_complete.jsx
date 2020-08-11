@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class NotComplete extends Component {
   state = {};
   check_answers(answers, name, expected_length) {
-    console.log(answers);
     if (answers.includes(undefined)) {
       return name;
     }
