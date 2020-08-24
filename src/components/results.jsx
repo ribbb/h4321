@@ -4,25 +4,25 @@ import Canvas from "./canvas";
 class Results extends Component {
   checkHints(all) {
     let hints_showing = [];
-    if (all.dietary_pattern_score / 10 < 0.5) {
+    if (all.dietary_pattern_score / 10 < 0.7) {
       hints_showing.push("0");
     }
-    if (all.grains_score / 20 < 0.5) {
+    if (all.grains_score / 20 < 0.7) {
       hints_showing.push("1");
     }
-    if (all.fruit_and_vegetables_score / 20 < 0.5) {
+    if (all.fruit_and_vegetables_score / 20 < 0.7) {
       hints_showing.push("2");
     }
-    if (all.fats_score / 15 < 0.5) {
+    if (all.fats_score / 15 < 0.7) {
       hints_showing.push("3");
     }
-    if (all.meat_fish_score / 10 < 0.5) {
+    if (all.meat_fish_score / 10 < 0.7) {
       hints_showing.push("4");
     }
-    if (all.dairy_score / 10 < 0.5) {
+    if (all.dairy_score / 10 < 0.7) {
       hints_showing.push("5");
     }
-    if (all.sugar_drink_score / 15 < 0.5) {
+    if (all.sugar_drink_score / 15 < 0.7) {
       hints_showing.push("6");
     }
     return hints_showing;
