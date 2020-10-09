@@ -25,7 +25,6 @@ class LandingPage extends Component {
     return (
       <div style={style}>
         <img src={logo} style={center}></img>
-
         <p>
           Ruokavaliolla on keskeinen merkitys terveyden ja hyvinvoinnin
           ylläpitämisessä. Testaa ruokavaliosi laatu vastaamalla seuraaviin
@@ -40,6 +39,8 @@ class LandingPage extends Component {
           ruokavalion kanssa. Kysymykset on jaettu seitsemään osioon.
           Vastattuasi kaikkiin kysymyksiin saat arvion ruokavaliosi laadusta.
         </p>
+        <br />
+        <p>Vastauksiasi ei tallenneta minnekkään.</p>
         <br />
         <button
           className="btn btn-success btn-lg"
