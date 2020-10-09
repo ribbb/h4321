@@ -40,7 +40,7 @@ class LandingPage extends Component {
           Vastattuasi kaikkiin kysymyksiin saat arvion ruokavaliosi laadusta.
         </p>
         <br />
-        <p>Vastauksiasi ei tallenneta minnekkään.</p>
+        <p>Vastauksiasi ei tallenneta.</p>
         <br />
         <button
           className="btn btn-success btn-lg"
