@@ -64,19 +64,19 @@ class Results extends Component {
       this.props.all.sugar_drink_score;
     let main_score_message = "";
     if (kokonaispisteet > 79) {
-      main_score_message = "Ruokavaliosi on suositusten mukainen, hienoa!";
+      main_score_message = "Ruokavaliosi on suositusten mukainen, hienoa! Jatka samalla tavalla eteenpäin.";
     } else if (kokonaispisteet > 59) {
       main_score_message =
-        "Ruokavaliosi on lähellä suosituksia – vieläkö keksit kohennettavaa? ";
+        "Hienoa! Ruokavaliosi on lähellä suositeltua – vieläkö keksit syömistavoissasi kohennettavaa?";
     } else if (kokonaispisteet > 39) {
       main_score_message =
-        "Ruokavaliosi on keskimääräisellä tasolla, ja valintoja viilaamalla se kohenee entisestään.";
+        "Ruokavaliosi on keskimäärin hyvällä tasolla, ja valintoja tarkastelemalla se kohenee entisestään.";
     } else if (kokonaispisteet > 19) {
       main_score_message =
-        "Ruokavaliossasi on hyviä asioita, mutta myös parantamisen varaa.";
+        "Ruokavaliossasi on hyviä asioita, mutta myös kohentamisen varaa. Mihin voisit vielä kiinnittää huomiotasi?";
     } else {
       main_score_message =
-        "Ruokavaliossasi on kohentamisen varaa. Mitä muutosta kokeilisit?";
+        "Ruokavaliossasi on kohentamisen varaa. Mitä muutosta kokeilisit? Mikä parantaisi jaksamistasi?";
     }
     return (
       <div id="results-div">
@@ -111,13 +111,13 @@ class Results extends Component {
   }
   GenerateHints(idx) {
     const hints = [
-      "Ruokarytmi: Päivittäin on hyvä syödä säännöllisin väliajoin terveellinen ateria, esimerkiksi aamupala, lounas ja päivällinen, sekä tarvittaessa 1-2 välipalaa. Säännöllinen ateriarytmi pitää veren sokeripitoisuuden tasaisena, auttaa syömään kohtuullisesti yksittäisillä aterioilla ja vähentää houkutusta napostella tai ahmia ruokaa ja tukee siten painonhallintaa.",
-      "Vilja: Viljavalmisteiden suositeltava päivittäinen käyttömäärä on noin 6 annosta naisille ja 9 annosta miehille, täysjyväviljaa suosien. Lautasellinen puuroa vastaa kahta annosta. Leivistä kannattaa valita laatuja, joissa on kuitua vähintään 6 g / 100 g.",
+      "Ruokarytmi: Päivittäin on hyvä syödä säännöllisin väliajoin, esimerkiksi aamupala, lounas ja päivällinen, sekä tarvittaessa 1-2 välipalaa. Säännöllinen ateriarytmi pitää veren sokeripitoisuuden  tasaisena, auttaa syömään kohtuullisesti yksittäisillä aterioilla ja vähentää houkutusta napostella tai ahmia ruokaa ja tukee siten painonhallintaa ja hyvää vireystasoa ja jaksamista.",
+      "Vilja: Viljavalmisteiden, kuten leivän, puuron, pastan ja täysjyvämurojen, suositeltava päivittäinen käyttömäärä on noin 6  annosta naisille ja 9 annosta miehille, täysjyväviljaa suosien.  Lautasellinen puuroa vastaa kahta annosta. Leivistä kannattaa valita laatuja, joissa on kuitua vähintään 6 g / 100 g. Pakkauksesta löytyvä Sydänmerkki helpottaa valinnoissa, sillä se kertoo tuotteen olevan Suositeltava valinta omassa tuoteryhmässään.",
       "Hedelmät ja vihannekset: Kasviksia (vihanneksia, juureksia, sieniä, hedelmiä ja marjoja) tulisi nauttia vähintään 500 g päivässä. Ne sisältävät runsaasti kuitua, vitamiineja ja kivennäisaineita ja muita hyödyllisiä yhdisteitä. Palkokasvit ovat hyvä proteiinin lähde.",
-      "Rasvat: Leipärasvana tulisi käyttää vähintään 60% rasvaa sisältävää kasviöljypohjaista levitettä ja salaattikastikkeena kasviöljypohjaista kastiketta. Myös pähkinöistä saa runsaasti pehmeää rasvaa, niitä voi nauttia (suolaamattomina ja sokeroimattomina) noin 30 g (2 ruokalusikallista) päivässä.",
-      "Kala ja liha: Kalaa suositellaan nautittavaksi 2-3 kertaa viikossa kalalajeja vaihdellen. Lihavalmisteita ja punaista lihaa ei tulisi käyttää enempää kuin 500 g viikossa.",
-      "Maidot: Maitovalmisteet ovat hyviä proteiinin, kalsiumin, jodin D-vitamiinin lähteitä. 5-6 dl nestemäisiä maitovalmisteita ja 2-3 viipaletta juustoa kattaa päivittäisen kalsiumin tarpeen. Maidon rasvasta 2/3 on tyydyttynyttä ”kovaa” rasvaa, siksi kannattaa suosia rasvattomia ja vähärasvaisia maitovalmisteita (nestemäiset  enintään 1%, juustot enintään 17% rasvaa).",
-      "Sattumat: Sattumiksi kutsutaan ”mielihyväruokia” joiden ravitsemuksellinen arvo on vähäinen. Näihin kuuluvat makeiset, perunalastut, leivonnaiset sekä sokeri- tai alkoholipitoiset juomat. Niitä kannattaa nauttia vain harvoin.",
+      "Rasva: Leipärasvana on suositeltavaa käyttää vähintään 60 % rasvaa sisältävää Sydänmerkittyä kasviöljypohjaista levitettä ja salaattikastikkeena kasviöljyä tai kasviöljypohjaista kastiketta. Myös pähkinöistä ja siemenistä saa runsaasti pehmeää rasvaa. Sopiva käyttömäärä (suolaamattomina ja sokeroimattomina) on noin 30 g (2 ruokalusikallista) päivässä.",
+      "Kala ja liha: Kala-aterioita suositellaan nautittavaksi 2-3 kertaa viikossa kalalajeja vaihdellen. Suosi kalaruokien lisäksi erilaisia kasvisruokia ja vähärasvaista siipikarjanlihaa. Lihavalmisteita ja punaista lihaa ei tulisi käyttää enempää kuin 500 g viikossa. Rasvaisia ja runsassuolaisia lihavalmisteita kannattaa nauttia vain harvoin.",
+      "Maidot: Maitovalmisteet ovat hyviä proteiinin, kalsiumin, jodin ja D-vitamiinin lähteitä. 5-6 dl nestemäisiä maitovalmisteita ja 2-3 viipaletta juustoa kattaa päivittäisen kalsiumin tarpeen. Maitotuotteiden rasvasta 2/3 on tyydyttynyttä ”kovaa” rasvaa, siksi kannattaa jokapäiväisessä käytössä suosia rasvattomia ja vähärasvaisia maitovalmisteita (nestemäiset enintään 1 %, juustot  enintään 17 % rasvaa). Tarkista myös sokerin määrä, esimerkiksi maustamattomaan jogurttiin saa sopivasti makeutta marjoja lisäämällä. Maidon sijaan voidaan käyttää kasvipohjaisia (esimerkiksi kaura- ja soijapohjaiset) juomia ja jogurtteja, jotka on täydennetty kalsiumilla ja D-vitamiinilla.",
+      "Naposteltavat ja energiapitoiset juomat: Näiden ruokien ja juomien ravitsemuksellinen arvo on vähäinen, mutta ne tuovat mielihyvää ja vaihtelua. Näihin kuuluvat monet pikaruoat, makeiset, perunalastut, leivonnaiset sekä sokeri- tai alkoholipitoiset juomat. Niitä kannattaa nauttia vain harvoin ja kohtuullisia määriä.",
     ];
     let hint = hints[idx];
     let topic_and_hint = hint.split(":");
