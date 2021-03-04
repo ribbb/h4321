@@ -26,18 +26,16 @@ class LandingPage extends Component {
       <div style={style}>
         <img src={logo} style={center}></img>
         <p>
-          Ruokavaliolla on keskeinen merkitys terveyden ja hyvinvoinnin
-          ylläpitämisessä. Testaa ruokavaliosi laatu vastaamalla seuraaviin
-          kysymyksiin. Kysymykset on kehitetty DEHKON 2D-hankkeessa, ja niiden
-          pohjalta laskettu RUOKAVALIOINDEKSI StopDia-hankkeessa.{" "}
+          Ruokavalio on kokonaisuus ja sillä on keskeinen merkitys terveyden  ja hyvinvoinnin ylläpitämisessä sekä arjessa jaksamisessa. Testaa ruokavaliosi laatu vastaamalla seuraaviin kysymyksiin. Kysymyksiin vastaaminen kestää noin vartin verran. Kysymykset on  kehitetty DEHKON 2D-hankkeessa, ja niiden pohjalta laskettu  RUOKAVALIOINDEKSI StopDia-hankkeessa.{" "}
+        </p>
+        <br />
+        <p>
+          RUOKAVALIOINDEKSI kuvaa sitä, miten hyvin nykyinen tapasi syödä on linjassa ravitsemussuositusten ja tyypin 2 diabetekselta suojaavan ruokavalion kanssa.
         </p>
         <br />
         <br />
         <p>
-          RUOKAVALIOINDEKSI kuvaa sitä, miten hyvin nykyinen tapasi syödä on
-          linjassa ravitsemussuositusten ja tyypin 2 diabetekselta suojaavan
-          ruokavalion kanssa. Kysymykset on jaettu seitsemään osioon.
-          Vastattuasi kaikkiin kysymyksiin saat arvion ruokavaliosi laadusta.
+          Kysymykset on jaettu seitsemään osioon. Vastattuasi kaikkiin kysymyksiin saat arvion ruokavaliosi kokonaislaadusta pisteytettynä  0-100. Lisäksi näet eri osioista saamasi pisteet.
         </p>
         <br />
         <p>Vastauksiasi ei tallenneta.</p>
