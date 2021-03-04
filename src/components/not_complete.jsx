@@ -26,12 +26,12 @@ class NotComplete extends Component {
     content.push(
       this.check_answers(
         this.props.all.final_scores.slice(19, 21),
-        "Hedelmät",
+        "Hedelmät ja Kasvikset",
         2
       )
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(21, 26), "Rasvat", 5)
+      this.check_answers(this.props.all.final_scores.slice(21, 26), "Ruokavalion Rasva", 5)
     );
     content.push(
       this.check_answers(this.props.all.final_scores.slice(26, 35), "Kala", 9)
@@ -40,7 +40,7 @@ class NotComplete extends Component {
       this.check_answers(this.props.all.final_scores.slice(35, 44), "Maito", 9)
     );
     content.push(
-      this.check_answers(this.props.all.final_scores.slice(44), "Sattumat", 13)
+      this.check_answers(this.props.all.final_scores.slice(44), "Naposteltavat ja energiapitoiset juomat", 13)
     );
     let missin_fields = [];
     for (let i = 0; i < content.length; i++) {
