@@ -22,7 +22,7 @@ class App extends Component {
       "Rasvat",
       "Kala ja Liha",
       "Maidot",
-      "Sattumat",
+      "Naposteltavat ja energiapitoiset juomat",
       "Tulokset",
     ],
     question_indexes: [0, 12, 19, 21, 26, 35, 44, 57, 58],
